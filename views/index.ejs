@@ -6,30 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency API UI</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <h1 class="title">Cryptocurrency API UI</h1>
-
-    <div class="form-container">
-        <form class="form" action="/get-crypto" method="POST">
+        
+    <form class="form" action="/get-crypto" method="POST">
+        <div class="form-container"></div>
             <div class="input-container">
                 <label class="input-label">Type a crypto abbreviation and the currency you want</label>
-                <input class="text-input" type="text" name="userCrypto" placeholder="E.g. BTC-USD">
+                <input class="text-input" type="text" name="userCrypto" placeholder=" E.g. BTC-USD">
             </div>
 
             <h3 class="form-separator">Or</h3>
 
             <div class="input-container">
+                <label class="dropdown input-label">Choose one of the most famous crypto</label>
                 <select class="dropdown-menu" name="dropdownMenu">
-                    <option value="none">Choose one of the most famous crypto</option>
+                    <option value="none">none</option>
                     <option value="BTC-USD">BTC</option>
                     <option value="ETH-USD">ETH</option>
                     <option value="LTC-USD">LTC</option>
                     <option value="XRP-USD">XRP</option>
                 </select>
             </div>
-        </form>
-    </div>
+            <button class="submit-btn" type="submit">Get Info</button>
+        </div>
+    </form>
+
 </body>
 </html>
